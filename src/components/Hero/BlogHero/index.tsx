@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import * as Styled from './styles';
 
-const BlogHero = ({}) => (
+const BlogHero = ({ }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -33,7 +33,7 @@ const BlogHero = ({}) => (
         >
           <div className="bg-primary-blue bg-opacity-25 m-10 p-3 rounded-lg shadow-2xl">
             <Styled.Title>Modern Application Development</Styled.Title>
-            <Styled.SubTitle>Progressive web solutions</Styled.SubTitle>
+            <Styled.SubTitle>Blog. Where we write, when we write.</Styled.SubTitle>
           </div>
         </BackgroundImage>
       );
