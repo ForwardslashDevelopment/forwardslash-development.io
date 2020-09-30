@@ -1,6 +1,6 @@
 # Forwardslash Development
-
-Prototype domain development for forwardslash development
+![Forwardslash Devewlopment](./forwardslash-development-io.png)
+Prototype domain application development for [forwardslash-development.io](https://forwardslash-development.io)
 
 ## Prerequisites
 
