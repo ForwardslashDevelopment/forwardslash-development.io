@@ -1,3 +1,7 @@
+const siteMetadata = {
+  title: `The Localhost Blog`,
+  description: `This is my development blog where I write about my... development.`,
+}
 module.exports = {
   siteMetadata: {
     title: `Forwardslash Development`,
@@ -12,8 +16,21 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/assets/images`
-      }
+        path: `${__dirname}/src/assets/images`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: `posts`,
+        path: `${__dirname}/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+      },
     },
     {
       resolve: 'gatsby-transformer-remark',
@@ -24,10 +41,10 @@ module.exports = {
             options: {
               maxWidth: 768,
               linkImagesToOriginal: false
-            }
+            },
           }
         ]
-      }
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
