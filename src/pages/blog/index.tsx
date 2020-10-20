@@ -1,12 +1,14 @@
 import React from 'react';
-import { graphql } from 'gatsby'
-import Dump from '../../utils/Dump'
+import { graphql, Link } from 'gatsby'
+import styled from 'styled-components'
 import Layout from 'components/Layout';
 import SEO from 'components/SEO';
 import { useSiteMetadata } from '../../utils/Hooks/useSiteMetadata'
 import BlogHero from 'components/Hero/BlogHero';
+import { fieldSubscriptionItems } from 'final-form';
 
-
+const IndexWrapper = styled.main``
+const PostWrapper = styled.div``
 
 // const BlogPage: React.FC = () => {
 export default ({ data }) => {
@@ -24,14 +26,17 @@ export default ({ data }) => {
             card and is waiting to be moved to the "in progress" column. Stay tuned!
         </p>
         </div>
-        <Dump data={data} />
-        {data.allMdx.nodes.map(({ excerpt, frontmatter }) => (
-          <>
-            <h1>{frontmatter.title}</h1>
-            <p>{frontmatter.date}</p>
-            <p>{excerpt}</p>
-          </>
-        ))}
+        <IndexWrapper>
+          {data.allMdx.nodes.map(({ id, fields, excerpt, frontmatter }) => (
+            <PostWrapper key={id}>
+              <Link to={fields.slug}>
+                <h1>{frontmatter.title}</h1>
+                <p>{frontmatter.date}</p>
+                <p>{excerpt}</p>
+              </Link>
+            </PostWrapper>
+          ))}
+        </IndexWrapper>
       </Layout>
     </>
   )
@@ -51,6 +56,9 @@ export const query = graphql`
         frontmatter {
           title
           date
+        }
+        fields {
+          slug
         }
       }
     }
