@@ -1,6 +1,6 @@
 const path = require('path');
 
-/* Allows named imports */
+/* allows named imports */
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
@@ -8,3 +8,16 @@ exports.onCreateWebpackConfig = ({ actions }) => {
     }
   });
 };
+/* file path for blog post */
+const { createFilePath } = require(`gatsby-source-filesystem`)
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `Mdx`) {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
+}
