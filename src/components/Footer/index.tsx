@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import Container from '../../components/ui/Container';
-import SwitchThemeMode from './SwitchThemeMode';
 
 import * as Styled from './styles';
 
@@ -20,9 +19,6 @@ const Footer: React.FC = () => (
           <Styled.Link>Connect</Styled.Link>
         </Link>
       </Styled.Links>
-      <Styled.ThemeSwitchWrapper>
-        <SwitchThemeMode />
-      </Styled.ThemeSwitchWrapper>
     </Container>
     <Styled.Brand>
       <Link to="/">
