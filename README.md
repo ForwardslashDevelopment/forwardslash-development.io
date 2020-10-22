@@ -1,4 +1,4 @@
-# Forwardslash Development
+# forwardslash-development.io
 ![Forwardslash Devewlopment](./forwardslash-development-io.png)
 Prototype domain application development for [forwardslash-development.io](https://forwardslash-development.io)
 
