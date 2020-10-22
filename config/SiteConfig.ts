@@ -12,8 +12,7 @@ export default {
   author: 'jv', // Author for schemaORGJSONLD
   siteLogo: '/assets/logo.png', // Image for schemaORGJSONLD
 
-  // siteFBAppID: 'fuck-facebook', // Facebook App ID - Optional
-  // userTwitter: '@forwardslash-development.io', // Twitter Username - Optional
+  // userTwitter: '@forwardslash-development.io', // Twitter Username @development_io
   // ogSiteName: 'fuck-facebook', // Facebook Site Name - Optional
   // ogLanguage: 'en_US', // Facebook Language
 
@@ -27,10 +26,7 @@ export default {
   bodyFontFamily: 'Open Sans',
   baseFontSize: '18px',
 
-  // Social media
-  siteFBAppID: '',
-
   //
   Google_Tag_Manager_ID: 'GTM-XXXXXXX',
-  POST_PER_PAGE: 4
+  POST_PER_PAGE: 1
 };

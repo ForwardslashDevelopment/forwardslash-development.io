@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Row, Col, Button } from 'react-bootstrap';
 
 const ConnectForm = () => (
-  <div className="container rounded-lg bg-blue-500 mb-3 pt-4">
+  <div className="bg-blue-500 mb-3 p-4 ml-4 mr-4">
     <h1 className="text-center text-white pb-2">Connect with Us</h1>
     <Form className="" form action="https://formspree.io/xlepykgb" method="POST">
       <Form.Group>

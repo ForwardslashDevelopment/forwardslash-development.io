@@ -5,7 +5,7 @@ const siteMetadata = {
 module.exports = {
   siteMetadata: {
     title: `Forwardslash Development`,
-    siteDescription: 'Forwardslash Development progressive application development solutions',
+    siteDescription: 'Forwardslash Development. Modern application development, progressive web solutions',
     description: `Forwardslash Development Gatsby Starter, using Typescript, Styled Components, Tailwindcss and Framer Motion.`,
     author: `jv`
   },
@@ -46,6 +46,12 @@ module.exports = {
         ]
       },
     },
+    {
+    resolve: `gatsby-plugin-s3`,
+    options: {
+      bucketName: "forwardslash-development.io",
+    },
+  },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
